@@ -28,9 +28,6 @@ ul {
 }
 
 @media (max-width: 576px) {
-  .main {
-    padding: 0 !important;
-  }
   .btn-secondary {
     width: 100% !important;
     font-size: 13px !important;
