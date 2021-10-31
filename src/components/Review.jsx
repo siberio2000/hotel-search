@@ -1,5 +1,10 @@
 import React from "react";
 
+function formatDate(string){
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(string).toLocaleDateString([],options);
+}
+
 /**
  * Create Review component
  */
@@ -14,7 +19,7 @@ export const Review = ({
   <div className="main p-3">
     <div className="col-xl-12 d-flex justify-content-center list-group-item-success">
     <ul>
-    <li><b>Published Date:</b> {publishedDate}</li>
+    <li><b>Published Date:</b> {formatDate(publishedDate)}</li>
     <li><b>Rating:</b> {rating}</li>
     <li><b>Title:</b> {title}</li>
     <li><b>Description:</b> {text}</li>
